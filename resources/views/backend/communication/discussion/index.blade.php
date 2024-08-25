@@ -3,7 +3,7 @@
 
 @push('styles')
 <!-- Datatable -->
-<link href="{{asset('public/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+<link href="{{asset('vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -55,7 +55,7 @@
                                                 <th>{{__('Course')}}</th>
                                                 <th>{{__('Title')}}</th>
                                                 <th>{{__('Comment')}}</th>
-                                                <th>{{__('Action')}}</th> 
+                                                <th>{{__('Action')}}</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -103,7 +103,7 @@
 
 @push('scripts')
 <!-- Datatable -->
-<script src="{{asset('public/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('public/js/plugins-init/datatables.init.js')}}"></script>
+<script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('js/plugins-init/datatables.init.js')}}"></script>
 
 @endpush

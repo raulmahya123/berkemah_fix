@@ -3,7 +3,7 @@
 
 @push('styles')
 <!-- Datatable -->
-<link href="{{asset('public/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+<link href="{{asset('vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -38,7 +38,7 @@
                     <li class="breadcrumb-item active"><a href="{{route('role.index')}}">All Permission</a></li>
                 </ol>
             </div>
-        </div> 
+        </div>
 
         <div class="row">
             <div class="col-lg-12">
@@ -61,7 +61,7 @@
                             foreach($permission as $perm){
                             $permissions[$perm->name]=$perm->name;
                             }
-                            @endphp 
+                            @endphp
                             @foreach(Illuminate\Support\Facades\Route::getRoutes() as $v)
                             @if($v->getPrefix()=="/admin")
                             @php
@@ -96,7 +96,7 @@
                                         @endif
                                     </div>
                                     @empty
-                        
+
                                     @endforelse
                                 </div>
                                 <div class="row">
@@ -105,7 +105,7 @@
                                     </div>
                                 </div>
                             </form>
-                        
+
                         </div>
                     </div>
                 </div>
@@ -119,8 +119,8 @@
 
 @push('scripts')
 <!-- Datatable -->
-<script src="{{asset('public/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('public/js/plugins-init/datatables.init.js')}}"></script>
+<script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('js/plugins-init/datatables.init.js')}}"></script>
 
 <script>
     function checkAll(e){

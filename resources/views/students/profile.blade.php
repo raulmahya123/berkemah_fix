@@ -25,7 +25,7 @@
                 <div>
                     <div class="students-info-intro-start">
                         <div class="image">
-                            <img src="{{ asset('public/uploads/students/' . $student_info->image) }}" alt="Student" />
+                            <img src="{{ asset('uploads/students/' . $student_info->image) }}" alt="Student" />
                         </div>
                         <div class="text">
                             <h5>{{$student_info->name_en}}</h5>
@@ -286,7 +286,7 @@
                             <div class="white-bg">
                                 <div class="change-image-wizard">
                                     <div class="image mx-auto">
-                                        <img src="{{ asset('public/uploads/students/' . $student_info->image) }}"
+                                        <img src="{{ asset('uploads/students/' . $student_info->image) }}"
                                             alt="User" height="200" width="200">
                                     </div>
                                     <form id="changeImageForm" action="{{ route('change_image') }}" method="post"
@@ -319,12 +319,12 @@
     $(document).ready(function() {
             // Hide the file input initially
             $('#newImageInput').hide();
-    
+
             // Trigger the file input when the button is clicked
             $('#changeImageButton').click(function() {
                 $('#newImageInput').click();
             });
-    
+
             // Automatically submit the form when a file is selected
             $('#newImageInput').change(function() {
                 $('#changeImageForm').submit();

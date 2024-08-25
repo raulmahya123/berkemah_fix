@@ -2,10 +2,11 @@
 @section('title', 'Admin Dashboard')
 
 @push('styles')
-<link rel="stylesheet" href="{{asset('public/vendor/jqvmap/css/jqvmap.min.css')}}">
-<link rel="stylesheet" href="{{asset('public/vendor/chartist/css/chartist.min.css')}}">
-<link rel="stylesheet" href="{{asset('public/css/skin-2.css')}}">
+<link rel="stylesheet" href="{{ asset('vendor/jqvmap/css/jqvmap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('vendor/chartist/css/chartist.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/skin-2.css') }}">
 @endpush
+
 
 @section('content')
 
@@ -532,19 +533,16 @@
         </div>
     </div>
 </div>
-
-@endsection
-
 @push('scripts')
 <!-- Chart ChartJS plugin files -->
-<script src="{{asset('public/vendor/chart.js/Chart.bundle.min.js')}}"></script>
+<script src="{{ asset('vendor/chart.js/Chart.bundle.min.js') }}"></script>
 
 <!-- Chart piety plugin files -->
-<script src="{{asset('public/vendor/peity/jquery.peity.min.js')}}"></script>
+<script src="{{ asset('vendor/peity/jquery.peity.min.js') }}"></script>
 
 <!-- Chart sparkline plugin files -->
-<script src="{{asset('public/vendor/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
+<script src="{{ asset('vendor/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
 
 <!-- Demo scripts -->
-<script src="{{asset('public/js/dashboard/dashboard-3.js')}}"></script>
+<script src="{{ asset('js/dashboard/dashboard-3.js') }}"></script>
 @endpush

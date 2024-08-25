@@ -6,14 +6,15 @@
 @section('content')
 
 <!-- Banner Starts Here -->
-<section class="main-banner" style="background-image: url({{asset('public/frontend/dist/images/banner/banner.jpg')}});">
+<section class="main-banner" style="background-image: url({{asset('frontend/dist/images/banner/banner.jpg')}});">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 mb-lg-0 order-2 order-lg-0 d-flex align-items-center">
                 <div class="banner-two-start">
-                    <h1 class="font-title--lg">Unlock Knowledge Anywhere, Anytime with Experts.</h1>
+                    <h1 class="font-title--lg">Buka Akses Tak Terbatas: Belajar dari Para Ahli Kapan Saja, di Mana Saja.</h1>
+                    <h5>#ProgrammerMilenial</h5>
                     <p>
-                       Our commitment is to guide you to the finest online courses, offering expert insights whenever and wherever you are.
+                        "Kami berkomitmen membawa Anda ke kursus daring terbaik, memberikan akses ke wawasan ahli di mana pun dan kapan pun Anda butuhkan".
                     </p>
                     <form>
                         <div class="banner-input">
@@ -35,7 +36,7 @@
             </div>
             <div class="col-lg-5 order-1 order-lg-0">
                 <div class="main-banner-end">
-                    <img src="{{asset('public/frontend/dist/images/banner/banner-image-01.png')}}" alt="image"
+                    <img src="{{asset('frontend/dist/images//banner/banner-image-01.png')}}" alt="image"
                         class="img-fluid" width="515" height="700"/>
                 </div>
             </div>
@@ -46,7 +47,7 @@
 <!-- Browse Categories Starts Here -->
 <section class="section browse-categories">
     <div class="container">
-        <h2 class="font-title--md text-center mb-0">Browse Course with Top Categories</h2>
+        <h2 class="font-title--md text-center mb-0">Cari Kursus Terbaik dalam Kategori Favorit</h2>
         <div class="browse-categories__wrapper position-relative">
             <div class="categories--box">
                 @forelse ($category as $cat)
@@ -57,7 +58,7 @@
                 <div class="browse-categories-item default-item-one mb-2">
                     <div class="browse-categories-item-icon">
                         <div class="categories-one default-categories">
-                            <img src="{{asset('public/uploads/courseCategories/'.$cat->category_image)}}"
+                            <img src="{{asset('uploads/courseCategories/'.$cat->category_image)}}"
                                 class="rounded-circle" width="80" height="80" alt="">
                         </div>
                     </div>
@@ -77,9 +78,9 @@
         </div>
     </div>
     <div class="browse-categories-shape">
-        <img src="{{asset('public/frontend/dist/images/shape/dots/dots-img-11.png')}}" alt="shape"
+        <img src="{{asset('frontend/dist/images//shape/dots/dots-img-11.png')}}" alt="shape"
             class="img-fluid shape-01" />
-        <img src="{{asset('public/frontend/dist/images/shape/line01.png')}}" alt="shape" class="img-fluid shape-02" />
+        <img src="{{asset('frontend/dist/images//shape/line01.png')}}" alt="shape" class="img-fluid shape-02" />
     </div>
 </section>
 
@@ -90,7 +91,7 @@
             <div class="col-lg-12">
                 <div class="featured-popular-courses-heading d-flex align-content-center justify-content-between">
                     <div class="main-heading">
-                        <h3 class="font-title--md">Our Popular Courses</h3>
+                        <h3 class="font-title--md">Pilihan Kursus Terpopuler Kami</h3>
                     </div>
                     <div class="nav-button featured-popular-courses-tabs">
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -142,7 +143,7 @@
                         <div class="col-xl-4 col-md-6">
                             <div class="contentCard contentCard--course">
                                 <div class="contentCard-top">
-                                    <a href="#"><img src="{{asset('public/uploads/courses/'.$pc->image)}}" alt="images"
+                                    <a href="#"><img src="{{asset('uploads/courses/'.$pc->image)}}" alt="images"
                                             class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
@@ -153,7 +154,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="{{route('instructorProfile', encryptor('encrypt', $pc->instructor?->id))}}"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('public/uploads/users/'.$pc?->instructor->image)}}"
+                                            <img src="{{asset('uploads/users/'.$pc?->instructor->image)}}"
                                                 alt="client-image" class="rounded-circle" height="34" width="34" />
                                             <p class="font-para--md">{{$pc?->instructor->name_en}}</p>
                                         </a>
@@ -165,28 +166,28 @@
                                     <div class="contentCard-more">
                                         <div class="d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/star.png')}}"
+                                                <img src="{{asset('frontend/dist/images//icon/star.png')}}"
                                                     alt="star" />
                                             </div>
                                             <span>4.5</span>
                                         </div>
                                         <div class="eye d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/eye.png')}}"
+                                                <img src="{{asset('frontend/dist/images//icon/eye.png')}}"
                                                     alt="eye" />
                                             </div>
                                             <span>24,517</span>
                                         </div>
                                         <div class="book d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/book.png')}}"
+                                                <img src="{{asset('frontend/dist/images//icon/book.png')}}"
                                                     alt="location" />
                                             </div>
                                             <span>{{$pc->lesson?$pc->lesson:0}} Lesson</span>
                                         </div>
                                         <div class="clock d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/Clock.png')}}"
+                                                <img src="{{asset('frontend/dist/images//icon/Clock.png')}}"
                                                     alt="clock" />
                                             </div>
                                             <span>{{$pc->duration?$pc->duration:0}} Hours</span>
@@ -216,7 +217,7 @@
                         <div class="col-xl-4 col-md-6">
                             <div class="contentCard contentCard--course">
                                 <div class="contentCard-top">
-                                    <a href="#"><img src="{{asset('public/uploads/courses/'.$dc->image)}}" alt="images" class="img-fluid" /></a>
+                                    <a href="#"><img src="{{asset('uploads/courses/'.$dc->image)}}" alt="images" class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
                                     <h5>
@@ -226,7 +227,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="{{route('instructorProfile', encryptor('encrypt', $dc->instructor?->id))}}"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('public/uploads/users/'.$dc?->instructor->image)}}" alt="client-image"
+                                            <img src="{{asset('uploads/users/'.$dc?->instructor->image)}}" alt="client-image"
                                                 class="rounded-circle" height="34" width="34" />
                                             <p class="font-para--md">{{$dc?->instructor->name_en}}</p>
                                         </a>
@@ -238,25 +239,25 @@
                                     <div class="contentCard-more">
                                         <div class="d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/star.png')}}" alt="star" />
+                                                <img src="{{asset('frontend/dist/images//icon/star.png')}}" alt="star" />
                                             </div>
                                             <span>4.5</span>
                                         </div>
                                         <div class="eye d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/eye.png')}}" alt="eye" />
+                                                <img src="{{asset('frontend/dist/images//icon/eye.png')}}" alt="eye" />
                                             </div>
                                             <span>24,517</span>
                                         </div>
                                         <div class="book d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/book.png')}}" alt="location" />
+                                                <img src="{{asset('frontend/dist/images//icon/book.png')}}" alt="location" />
                                             </div>
                                             <span>{{$dc->lesson?$dc->lesson:0}} Lesson</span>
                                         </div>
                                         <div class="clock d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/Clock.png')}}" alt="clock" />
+                                                <img src="{{asset('frontend/dist/images//icon/Clock.png')}}" alt="clock" />
                                             </div>
                                             <span>{{$dc->duration?$dc->duration:0}} Hours</span>
                                         </div>
@@ -285,7 +286,7 @@
                         <div class="col-xl-4 col-md-6">
                             <div class="contentCard contentCard--course">
                                 <div class="contentCard-top">
-                                    <a href="#"><img src="{{asset('public/uploads/courses/'.$dv->image)}}" alt="images"
+                                    <a href="#"><img src="{{asset('uploads/courses/'.$dv->image)}}" alt="images"
                                             class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
@@ -296,7 +297,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="{{route('instructorProfile', encryptor('encrypt', $dv->instructor?->id))}}"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('public/uploads/users/'.$dv?->instructor->image)}}" alt="client-image"
+                                            <img src="{{asset('uploads/users/'.$dv?->instructor->image)}}" alt="client-image"
                                                 class="rounded-circle" height="34" width="34" />
                                             <p class="font-para--md">{{$dv?->instructor->name_en}}</p>
                                         </a>
@@ -308,25 +309,25 @@
                                     <div class="contentCard-more">
                                         <div class="d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/star.png')}}" alt="star" />
+                                                <img src="{{asset('frontend/dist/images//icon/star.png')}}" alt="star" />
                                             </div>
                                             <span>4.5</span>
                                         </div>
                                         <div class="eye d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/eye.png')}}" alt="eye" />
+                                                <img src="{{asset('frontend/dist/images//icon/eye.png')}}" alt="eye" />
                                             </div>
                                             <span>24,517</span>
                                         </div>
                                         <div class="book d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/book.png')}}" alt="location" />
+                                                <img src="{{asset('frontend/dist/images//icon/book.png')}}" alt="location" />
                                             </div>
                                             <span>{{$dv->lesson?$dv->lesson:0}} Lesson</span>
                                         </div>
                                         <div class="clock d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/Clock.png')}}" alt="clock" />
+                                                <img src="{{asset('frontend/dist/images//icon/Clock.png')}}" alt="clock" />
                                             </div>
                                             <span>{{$dv->duration?$dv->duration:0}} Hours</span>
                                         </div>
@@ -355,7 +356,7 @@
                         <div class="col-xl-4 col-md-6">
                             <div class="contentCard contentCard--course">
                                 <div class="contentCard-top">
-                                    <a href="#"><img src="{{asset('public/uploads/courses/'.$bc->image)}}" alt="images"
+                                    <a href="#"><img src="{{asset('uploads/courses/'.$bc->image)}}" alt="images"
                                             class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
@@ -366,7 +367,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="{{route('instructorProfile', encryptor('encrypt', $bc->instructor?->id))}}"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('public/uploads/users/'.$bc?->instructor->image)}}" alt="client-image"
+                                            <img src="{{asset('uploads/users/'.$bc?->instructor->image)}}" alt="client-image"
                                                 class="rounded-circle" height="34" width="34" />
                                             <p class="font-para--md">{{$bc?->instructor->name_en}}</p>
                                         </a>
@@ -378,25 +379,25 @@
                                     <div class="contentCard-more">
                                         <div class="d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/star.png')}}" alt="star" />
+                                                <img src="{{asset('frontend/dist/images//icon/star.png')}}" alt="star" />
                                             </div>
                                             <span>4.5</span>
                                         </div>
                                         <div class="eye d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/eye.png')}}" alt="eye" />
+                                                <img src="{{asset('frontend/dist/images//icon/eye.png')}}" alt="eye" />
                                             </div>
                                             <span>24,517</span>
                                         </div>
                                         <div class="book d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/book.png')}}" alt="location" />
+                                                <img src="{{asset('frontend/dist/images//icon/book.png')}}" alt="location" />
                                             </div>
                                             <span>{{$bc->lesson?$bc->lesson:0}} Lesson</span>
                                         </div>
                                         <div class="clock d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/Clock.png')}}" alt="clock" />
+                                                <img src="{{asset('frontend/dist/images//icon/Clock.png')}}" alt="clock" />
                                             </div>
                                             <span>{{$bc->duration?$bc->duration:0}} Hours</span>
                                         </div>
@@ -425,7 +426,7 @@
                         <div class="col-xl-4 col-md-6">
                             <div class="contentCard contentCard--course">
                                 <div class="contentCard-top">
-                                    <a href="#"><img src="{{asset('public/uploads/courses/'.$ic->image)}}" alt="images"
+                                    <a href="#"><img src="{{asset('uploads/courses/'.$ic->image)}}" alt="images"
                                             class="img-fluid" /></a>
                                 </div>
                                 <div class="contentCard-bottom">
@@ -436,7 +437,7 @@
                                     <div class="contentCard-info d-flex align-items-center justify-content-between">
                                         <a href="{{route('instructorProfile', encryptor('encrypt', $ic->instructor?->id))}}"
                                             class="contentCard-user d-flex align-items-center">
-                                            <img src="{{asset('public/uploads/users/'.$ic?->instructor->image)}}" alt="client-image"
+                                            <img src="{{asset('uploads/users/'.$ic?->instructor->image)}}" alt="client-image"
                                                 class="rounded-circle" height="34" width="34" />
                                             <p class="font-para--md">{{$ic?->instructor->name_en}}</p>
                                         </a>
@@ -448,25 +449,25 @@
                                     <div class="contentCard-more">
                                         <div class="d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/star.png')}}" alt="star" />
+                                                <img src="{{asset('frontend/dist/images//icon/star.png')}}" alt="star" />
                                             </div>
                                             <span>4.5</span>
                                         </div>
                                         <div class="eye d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/eye.png')}}" alt="eye" />
+                                                <img src="{{asset('frontend/dist/images//icon/eye.png')}}" alt="eye" />
                                             </div>
                                             <span>24,517</span>
                                         </div>
                                         <div class="book d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/book.png')}}" alt="location" />
+                                                <img src="{{asset('frontend/dist/images//icon/book.png')}}" alt="location" />
                                             </div>
                                             <span>{{$ic->lesson?$ic->lesson:0}} Lesson</span>
                                         </div>
                                         <div class="clock d-flex align-items-center">
                                             <div class="icon">
-                                                <img src="{{asset('public/frontend/dist/images/icon/Clock.png')}}" alt="clock" />
+                                                <img src="{{asset('frontend/dist/images//icon/Clock.png')}}" alt="clock" />
                                             </div>
                                             <span>{{$ic->duration?$ic->duration:0}} Hours</span>
                                         </div>
@@ -493,85 +494,122 @@
         </div>
     </div>
     <div class="featured-popular-courses-shape">
-        <img src="{{asset('public/frontend/dist/images/shape/dots/dots-img-12.png')}}" alt="Shape"
+        <img src="{{asset('frontend/dist/images//shape/dots/dots-img-12.png')}}" alt="Shape"
             class="img-fluid dot-06" />
-        <img src="{{asset('public/frontend/dist/images/shape/triangel.png')}}" alt="Shape" class="img-fluid dot-07" />
+        <img src="{{asset('frontend/dist/images//shape/triangel.png')}}" alt="Shape" class="img-fluid dot-07" />
     </div>
 </section>
 
 {{-- Why You'll Learn With Eduguard --}}
 <section class="section feature section section--bg-offwhite-one">
     <div class="container">
-        <h2 class="font-title--md text-center">Why You'll Learn with Eduguard</h2>
+        <h2 class="font-title--md text-center">Kenapa Kamu Akan Belajar Lebih Baik dengan Berkemah</h2>
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="cardFeature">
-                    <div class="cardFeature__icon cardFeature__icon--bg-g">
-                        <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2 2H10.4C11.8852 2 13.3096 2.5619 14.3598 3.5621C15.41 4.56229 16 5.91885 16 7.33333V26C16 24.9391 15.5575 23.9217 14.7699 23.1716C13.9822 22.4214 12.9139 22 11.8 22H2V2Z"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M30 2H21.6C20.1148 2 18.6904 2.5619 17.6402 3.5621C16.59 4.56229 16 5.91885 16 7.33333V26C16 24.9391 16.4425 23.9217 17.2302 23.1716C18.0178 22.4214 19.0861 22 20.2 22H30V2Z"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h5 class="font-title--xs">250k online course</h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed commodo enim Fusce sed.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="cardFeature">
-                    <div class="cardFeature__icon cardFeature__icon--bg-b">
-                        <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M19.3855 12.224C21.8743 12.224 23.8915 10.2067 23.8915 7.71794C23.8915 5.23054 21.8743 3.21191 19.3855 3.21191"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M21.4575 17.1211C22.201 17.1717 22.939 17.2783 23.6675 17.4395C24.6775 17.6404 25.8938 18.0546 26.3257 18.9607C26.6018 19.5415 26.6018 20.218 26.3257 20.7989C25.8952 21.705 24.6775 22.1191 23.6675 22.3269"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M10.5994 18.0913C15.6425 18.0913 19.9504 18.8553 19.9504 21.9071C19.9504 24.9604 15.6699 25.7503 10.5994 25.7503C5.55624 25.7503 1.24976 24.9877 1.24976 21.9345C1.24976 18.8813 5.52891 18.0913 10.5994 18.0913Z"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M10.5993 13.7349C7.27274 13.7349 4.60767 11.0684 4.60767 7.74188C4.60767 4.41669 7.27274 1.75024 10.5993 1.75024C13.9259 1.75024 16.5923 4.41669 16.5923 7.74188C16.5923 11.0684 13.9259 13.7349 10.5993 13.7349Z"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h5 class="font-title--xs">Expert Instructors</h5>
-                    <p>
-                        Vivamus interdum neque massa, eget mattis mi gravida eget. Donec et dictum justo. Vivamus
-                        interdum.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="cardFeature">
-                    <div class="cardFeature__icon cardFeature__icon--bg-r">
-                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M25.2502 13.2495C25.2502 19.8774 19.8781 25.2495 13.2502 25.2495C6.62235 25.2495 1.25024 19.8774 1.25024 13.2495C1.25024 6.62162 6.62235 1.24951 13.2502 1.24951C19.8781 1.24951 25.2502 6.62162 25.2502 13.2495Z"
-                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M17.7021 17.0667L12.8113 14.1491V7.86108" stroke="currentColor" stroke-width="2.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <h5 class="font-title--xs">Lifetime Access</h5>
-                    <p>
-                        Vivamus cursus libero quis lobortis mattis. Suspendisse in malesuada mi. Maecenas vel
-                        euismod turpis.
-                    </p>
-                </div>
-            </div>
+           <!-- Dukungan Komunitas -->
+<div class="col-lg-4 col-md-6">
+    <div class="cardFeature">
+        <div class="cardFeature__icon cardFeature__icon--bg-g">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8L16 16L24 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 16L24 24L16 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 8L8 16L16 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 16L16 24L8 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h5 class="font-title--xs">Dukungan Komunitas</h5>
+        <p>
+            Temukan bantuan dan dukungan dari komunitas yang aktif. Kami selalu siap membantu Anda dalam perjalanan belajar.
+        </p>
+    </div>
+</div>
+
+<!-- Instruktur Ahli -->
+<div class="col-lg-4 col-md-6">
+    <div class="cardFeature">
+        <div class="cardFeature__icon cardFeature__icon--bg-b">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M16 12L16 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 16H20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h5 class="font-title--xs">Instruktur Ahli</h5>
+        <p>
+            Belajar dari para profesional yang berpengalaman. Mereka akan membimbing Anda dengan pengetahuan dan keahlian mereka.
+        </p>
+    </div>
+</div>
+
+<!-- Akses Seumur Hidup -->
+<div class="col-lg-4 col-md-6">
+    <div class="cardFeature">
+        <div class="cardFeature__icon cardFeature__icon--bg-r">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="8" width="16" height="16" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M16 12L16 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 16H20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h5 class="font-title--xs">Akses Seumur Hidup</h5>
+        <p>
+            Nikmati akses tak terbatas ke semua materi kursus kami kapan saja dan di mana saja. Pelajari sesuai kecepatan Anda sendiri.
+        </p>
+    </div>
+</div>
+
+<!-- Kuis & Tugas -->
+<div class="col-lg-4 col-md-6">
+    <div class="cardFeature">
+        <div class="cardFeature__icon cardFeature__icon--bg-r">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 8H28V12H4V8Z" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M4 16H28V20H4V16Z" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M4 24H28V28H4V24Z" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+        </div>
+        <h5 class="font-title--xs">Kuis & Tugas</h5>
+        <p>
+            Tantang diri Anda dengan kuis dan tugas yang dirancang untuk menguji pemahaman Anda dan membantu memperkuat materi dipelajari.
+        </p>
+    </div>
+</div>
+
+<!-- Sertifikasi -->
+<div class="col-lg-4 col-md-6">
+    <div class="cardFeature">
+        <div class="cardFeature__icon cardFeature__icon--bg-r">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M12 16L16 20L20 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 12L16 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h5 class="font-title--xs">Sertifikasi</h5>
+        <p>
+            Dapatkan sertifikat resmi sebagai pengakuan atas pencapaian Anda setelah menyelesaikan kursus dan memenuhi semua persyaratan.
+        </p>
+    </div>
+</div>
+
+<!-- Akses 24/7 -->
+<div class="col-lg-4 col-md-6">
+    <div class="cardFeature">
+        <div class="cardFeature__icon cardFeature__icon--bg-g">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M16 8V16L20 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 16L16 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 16H24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h5 class="font-title--xs">Akses 24/7</h5>
+        <p>
+            Nikmati akses penuh ke materi dan dukungan kapan saja, siang atau malam. Belajar sesuai dengan jadwal Anda sendiri.
+        </p>
+    </div>
+</div>
+
+
         </div>
     </div>
 </section>
@@ -583,54 +621,52 @@
             <div class="col-lg-6 order-2 order-lg-0">
                 <div class="learning-rules-starts">
                     <h2 class="font-title--md">
-                        Eduguard Simple <br class="d-none d-md-block" />
-                        Learning Steps
+                        Berkemah: Langkah <br class="d-none d-md-block" />
+                        Menuju Keberhasilan
                     </h2>
                     <div class="learning-rules__wrapper">
                         <div class="learning-rules-item">
                             <div class="item-number"><span>01.</span></div>
                             <div class="item-text">
-                                <h6>Make Your Own Place.</h6>
+                                <h6>Ciptakan Tempat Anda Sendiri.</h6>
                                 <p>
-                                    Fusce dictum, velit eu placerat consectetur, ante nisl auctor magna, sit amet
-                                    fringilla urna nibh a risus.
+                                    Mulailah dengan menciptakan ruang yang nyaman dan inspiratif untuk belajar. Tempat yang tepat akan meningkatkan fokus dan produktivitas Anda.
                                 </p>
                             </div>
                         </div>
                         <div class="learning-rules-item">
                             <div class="item-number"><span>02.</span></div>
                             <div class="item-text">
-                                <h6>Find Best Course With Better Filtter.</h6>
+                                <h6>Temukan Kursus Terbaik dengan Filter yang Tepat.</h6>
                                 <p>
-                                    Morbi id est a risus sollicitudin maximus. Fusce lorem neque, tincidunt vel
-                                    rhoncus eget, convallis ullamcorper sem.
+                                    Gunakan filter yang tepat untuk menemukan kursus yang sesuai dengan kebutuhan dan tujuan Anda. Pilih yang terbaik untuk hasil yang optimal.
                                 </p>
                             </div>
                         </div>
                         <div class="learning-rules-item">
                             <div class="item-number"><span>03.</span></div>
                             <div class="item-text">
-                                <h6>And Become a Master in Your Field.</h6>
+                                <h6>Menjadi Ahli di Bidang Anda.</h6>
                                 <p>
-                                    Sed pulvinar dignissim neque, ac consectetur urna tincidunt vel. Sed congue
-                                    nulla sed tempus ultrices.
+                                    Dengan dedikasi dan usaha, tingkatkan keterampilan Anda dan jadilah ahli di bidang yang Anda pilih. Capai keahlian dengan belajar secara konsisten.
                                 </p>
                             </div>
                         </div>
+
                     </div>
-                    <a href="#" class="button button-lg button--primary">Start Learning</a>
+                    <a href="#" class="button button-lg button--primary">Mulai Belajar</a>
                 </div>
             </div>
             <div class="col-lg-6 order-1 order-lg-0">
                 <div class="learning-rules-ends">
-                    <img src="{{asset('public/frontend/dist/images/hero/hero-img-01.jpg')}}" alt="img"
+                    <img src="{{asset('frontend/dist/images//hero/hero-img-01.jpg')}}" alt="img"
                         class="img-fluid rounded"/>
                     <div class="learning-rules-ends-circle">
-                        <img src="{{asset('public/frontend/dist/images/shape/l03.png')}}" alt="shape"
+                        <img src="{{asset('frontend/dist/images//shape/l03.png')}}" alt="shape"
                             class="img-fluid" />
                     </div>
                     <div class="earning-rules-ends-shape">
-                        <img src="{{asset('public/frontend/dist/images/shape/l04.png')}}" alt="shape"
+                        <img src="{{asset('frontend/dist/images//shape/l04.png')}}" alt="shape"
                             class="img-fluid shape-1" />
                     </div>
                 </div>
@@ -638,9 +674,9 @@
         </div>
     </div>
     <div class="learning-rules-shape">
-        <img src="{{asset('public/frontend/dist/images/shape/dots/dots-img-16.png')}}" alt="shape"
+        <img src="{{asset('frontend/dist/images//shape/dots/dots-img-16.png')}}" alt="shape"
             class="img-fluid shape-01" />
-        <img src="{{asset('public/frontend/dist/images/shape/l02.png')}}" alt="shape" class="img-fluid shape-02" />
+        <img src="{{asset('frontend/dist/images//shape/l02.png')}}" alt="shape" class="img-fluid shape-02" />
     </div>
 </section>
 
@@ -649,19 +685,18 @@
     <div class="container about-services-area">
         <div class="row">
             <div class="col-lg-6 text-center mx-auto">
-                <h2 class="font-title--md">What Our Students Says About our Services</h2>
+                <h2 class="font-title--md">Apa Kata Siswa Kami Tentang Layanan Kami</h2>
             </div>
         </div>
         <div class="testimonial testimonial--one testimonial__slider--one">
             <div class="testimonial__item">
                 <p>
-                    “Nam hendrerit quam eu neque egestas, nec lobortis enim rutrum. Quisque ligula tortor, mollis a
-                    efficitur vitae, imperdiet et mauris. Nam in orci quis risus dapibus mollis.“
+                    "Layanan Bootcamp Berkemah menawarkan pelatihan UI/UX yang sangat efektif. Dengan pengajaran dari ahli dan metode praktis, Anda akan cepat menguasai desain antarmuka dan pengalaman pengguna. Bergabunglah dan tingkatkan keterampilan desain Anda dengan kami!"
                 </p>
                 <div class="testimonial__user-wrapper d-flex justify-content-between">
                     <div class="testimonial__user d-flex align-items-center">
                         <div class="testimonial__user-img">
-                            <img src="{{asset('public/frontend/dist/images/avatar/avatar-img-01.png')}}" alt="Client" />
+                            <img src="{{asset('frontend/dist/images/avatar/avatar-img-01.png')}}" alt="Client" />
                         </div>
                         <div class="testimonial__user-info">
                             <h6>Sheikh Rashed</h6>
@@ -719,17 +754,16 @@
             </div>
             <div class="testimonial__item">
                 <p>
-                    “Nam hendrerit quam eu neque egestas, nec lobortis enim rutrum. Quisque ligula tortor, mollis a
-                    efficitur vitae, imperdiet et mauris. Nam in orci quis risus dapibus mollis.“
+                    "Layanan kami untuk Software Engineer menawarkan solusi lengkap dalam pengembangan perangkat lunak. Kami menyediakan dukungan dari tahap perancangan hingga implementasi, dengan fokus pada kualitas dan efisiensi. Dengan tim ahli kami, Anda dapat memastikan perangkat lunak Anda akan memenuhi standar tertinggi dan memenuhi kebutuhan bisnis Anda secara efektif."
                 </p>
                 <div class="testimonial__user-wrapper d-flex justify-content-between">
                     <div class="testimonial__user d-flex align-items-center">
                         <div class="testimonial__user-img">
-                            <img src="{{asset('public/frontend/dist/images/avatar/avatar-img-02.png')}}" alt="Client" />
+                            <img src="{{asset('frontend/dist/images/avatar/avatar-img-02.png')}}" alt="Client" />
                         </div>
                         <div class="testimonial__user-info">
                             <h6>Dev Zakir</h6>
-                            <span class="font-para--md">UI/UX Student</span>
+                            <span class="font-para--md">Software Enginer Student</span>
                         </div>
                     </div>
                     <ul class="testimonial__item-star d-flex align-items-center">
@@ -783,17 +817,16 @@
             </div>
             <div class="testimonial__item">
                 <p>
-                    “Nam hendrerit quam eu neque egestas, nec lobortis enim rutrum. Quisque ligula tortor, mollis a
-                    efficitur vitae, imperdiet et mauris. Nam in orci quis risus dapibus mollis.“
+                    "Layanan kami untuk Data Scientist mencakup analisis data mendalam, pemodelan statistik, dan pengembangan solusi berbasis data. Kami menyediakan alat dan teknik terkini untuk mengolah data Anda menjadi wawasan yang berharga. Dengan dukungan ahli kami, Anda akan dapat membuat keputusan yang lebih baik dan strategis untuk bisnis Anda."
                 </p>
                 <div class="testimonial__user-wrapper d-flex justify-content-between">
                     <div class="testimonial__user d-flex align-items-center">
                         <div class="testimonial__user-img">
-                            <img src="{{asset('public/frontend/dist/images/avatar/avatar-img-03.png')}}" alt="Client" />
+                            <img src="{{asset('frontend/dist/images/avatar/avatar-img-03.png')}}" alt="Client" />
                         </div>
                         <div class="testimonial__user-info">
                             <h6>Dev Kate</h6>
-                            <span class="font-para--md">UI/UX Student</span>
+                            <span class="font-para--md">Data Scient Student</span>
                         </div>
                     </div>
                     <ul class="testimonial__item-star d-flex align-items-center">
@@ -848,11 +881,11 @@
         </div>
     </div>
     <div class="about-services-shape">
-        <img src="{{asset('public/frontend/dist/images/shape/line02.png')}}" alt="shape"
+        <img src="{{asset('frontend/dist/images//shape/line02.png')}}" alt="shape"
             class="img-fluid img-shape-01" />
-        <img src="{{asset('public/frontend/dist/images/shape/dots/dots-img-13.png')}}" alt="shape"
+        <img src="{{asset('frontend/dist/images//shape/dots/dots-img-13.png')}}" alt="shape"
             class="img-fluid img-shape-02" />
-        <img src="{{asset('public/frontend/dist/images/shape/l02.png')}}" alt="shape" class="img-fluid img-shape-03" />
+        <img src="{{asset('frontend/dist/images//shape/l02.png')}}" alt="shape" class="img-fluid img-shape-03" />
     </div>
     <div class="container overflow-hidden">
         <div class="row mb-40">
@@ -870,27 +903,27 @@
             <div class="col-lg-12">
                 <div class="brand-area">
                     <div class="brand-area-image">
-                        <img src="{{asset('public/frontend/dist/images/versity/1.png')}}" alt="Brand"
+                        <img src="{{asset('frontend/dist/images//versity/1.png')}}" alt="Brand"
                             class="img-fluid" />
                     </div>
                     <div class="brand-area-image">
-                        <img src="{{asset('public/frontend/dist/images/versity/2.png')}}" alt="Brand"
+                        <img src="{{asset('frontend/dist/images//versity/2.png')}}" alt="Brand"
                             class="img-fluid" />
                     </div>
                     <div class="brand-area-image">
-                        <img src="{{asset('public/frontend/dist/images/versity/3.png')}}" alt="Brand"
+                        <img src="{{asset('frontend/dist/images//versity/3.png')}}" alt="Brand"
                             class="img-fluid" />
                     </div>
                     <div class="brand-area-image">
-                        <img src="{{asset('public/frontend/dist/images/versity/4.png')}}" alt="Brand"
+                        <img src="{{asset('frontend/dist/images//versity/4.png')}}" alt="Brand"
                             class="img-fluid" />
                     </div>
                     <div class="brand-area-image">
-                        <img src="{{asset('public/frontend/dist/images/versity/2.png')}}" alt="Brand"
+                        <img src="{{asset('frontend/dist/images//versity/2.png')}}" alt="Brand"
                             class="img-fluid" />
                     </div>
                     <div class="brand-area-image">
-                        <img src="{{asset('public/frontend/dist/images/versity/5.png')}}" alt="Brand"
+                        <img src="{{asset('frontend/dist/images//versity/5.png')}}" alt="Brand"
                             class="img-fluid" />
                     </div>
                 </div>
@@ -904,13 +937,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 position-relative">
-                <h3 class="text-center mb-40 font-title--md">Meet Our Best Instructor</h3>
+                <h3 class="text-center mb-40 font-title--md">Kenali Instruktur Terbaik Kami</h3>
                 <div class="ourinstructor__wrapper mt-lg-5 mt-0">
                     <div class="ourinstructor-active">
                         @forelse ($instructor as $i)
                         <div class="mentor">
                             <div class="mentor__img">
-                                <img src="{{asset('public/uploads/users/'.$i->image)}}" alt="Mentor image" />
+                                <img src="{{asset('uploads/users/'.$i->image)}}" alt="Mentor image" />
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
                                         <a href="#" tabindex="0">
@@ -991,9 +1024,9 @@
         </div>
     </div>
     <div class="main-instructor-featured-shape">
-        <img src="{{asset('public/frontend/dist/images/shape/dots/dots-img-14.png')}}" alt="shape"
+        <img src="{{asset('frontend/dist/images//shape/dots/dots-img-14.png')}}" alt="shape"
             class="img-fluid shape01" />
-        <img src="{{asset('public/frontend/dist/images/shape/triangel2.png')}}" alt="shape" class="img-fluid shape02" />
+        <img src="{{asset('frontend/dist/images//shape/triangel2.png')}}" alt="shape" class="img-fluid shape02" />
     </div>
 </section>
 
@@ -1002,7 +1035,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="font-title--md">Latest Events</h3>
+                <h3 class="font-title--md">Acara Terbaru</h3>
             </div>
         </div>
         <div class="row">
@@ -1011,7 +1044,7 @@
                     @forelse ($course as $c)
                     <div class="contentCard contentCard--event contentCard--space">
                         <div class="contentCard-top">
-                            <a href="#"><img src="{{asset('public/uploads/courses/'.$c->image)}}" alt="images"
+                            <a href="#"><img src="{{asset('uploads/courses/'.$c->image)}}" alt="images"
                                     class="img-fluid" /></a>
                         </div>
                         <div class="contentCard-bottom">
@@ -1022,14 +1055,14 @@
                             <div class="contentCard-more">
                                 <div class="d-flex align-items-center">
                                     <div class="icon">
-                                        <img src="{{asset('public/frontend/dist/images/icon/location.png')}}"
+                                        <img src="{{asset('frontend/dist/images/icon/location.png')}}"
                                             alt="location" />
                                     </div>
                                     <span>Chicago, Illinois</span>
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <div class="icon">
-                                        <img src="{{asset('public/frontend/dist/images/icon/calendar.png')}}"
+                                        <img src="{{asset('frontend/dist/images/icon/calendar.png')}}"
                                             alt="calendar" />
                                     </div>
                                     <span>29th jan, 2020</span>
@@ -1050,7 +1083,7 @@
         </div>
     </div>
     <div class="main-events-featured-shape">
-        <img src="{{asset('public/frontend/dist/images/shape/triangel3.png')}}" alt="shape" class="img-fluid shape01" />
+        <img src="{{asset('frontend/dist/images/shape/triangel3.png')}}" alt="shape" class="img-fluid shape01" />
     </div>
 </section>
 
@@ -1061,17 +1094,15 @@
             <div class="col-lg-6">
                 <div class="main-become-instructor-item me-12">
                     <div class="main-image">
-                        <img src="{{asset('public/frontend/dist/images/event/image01.png')}}" alt="image"
-                            class="img-fluid" />
+                        <img src="{{ asset('frontend/dist/images/event/image01.png') }}" alt="image" class="img-fluid" />
                     </div>
                     <div class="main-text">
-                        <h6 class="font-title--sm">Become an Instructor</h6>
+                        <h6 class="font-title--sm">Menjadi Instruktur</h6>
                         <p>
-                            Praesent ultricies nulla ac congue bibendum. Aliquam tempor euismod purus posuere
-                            gravida. Praesent augue sapien, vulputate eu imperdiet eget, tempor at enim.
+                            Hadirkan kenyamanan dengan sentuhan elegan pada setiap langkah. Manfaatkan kesempatan untuk memperkuat keterampilan Anda, mengelola waktu dengan bijak, dan mencapai hasil yang maksimal.
                         </p>
                         <div class="text-center">
-                            <a href="become-instructor.html" class="green-btn">Apply as Instructor</a>
+                            <a href="become-instructor.html" class="green-btn">Daftar sebagai Instruktur</a>
                         </div>
                     </div>
                 </div>
@@ -1079,25 +1110,24 @@
             <div class="col-lg-6">
                 <div class="main-become-instructor-item ms-12 mb-0">
                     <div class="main-image">
-                        <img src="{{asset('public/frontend/dist/images/event/image02.png')}}" alt="image"
-                            class="img-fluid" />
+                        <img src="{{asset('frontend/dist/images/event/image02.png')}}" alt="image" class="img-fluid" />
                     </div>
                     <div class="main-text">
-                        <h6 class="font-title--sm">Use Eduguard For Business</h6>
+                        <h6 class="font-title--sm">Gunakan Berkemah untuk Bisnis</h6>
                         <p>
-                            Praesent ultricies nulla ac congue bibendum. Aliquam tempor euismod purus posuere
-                            gravida. Praesent augue sapien, vulputate eu imperdiet eget, tempor at enim.
+                            Tunjukkan kemampuan Anda dengan percaya diri, unggul dalam bidang yang Anda pilih, dan pastikan setiap tindakan Anda membawa dampak positif.
                         </p>
                         <div class="text-center">
-                            <a href="#" class="green-btn">Get Eduguard For Business</a>
+                            <a href="#" class="green-btn">Gunakan Berkemah untuk Bisnis</a>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="main-become-instructor-shape">
-        <img src="{{asset('public/frontend/dist/images/shape/line03.png')}}" alt="shape" class="img-fluid" />
+        <img src="{{asset('frontend/dist/images//shape/line03.png')}}" alt="shape" class="img-fluid" />
     </div>
 </section>
 
@@ -1107,16 +1137,16 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <div class="newsletter-area">
-                    <h4>Subscribe our Newsletter</h4>
+                    <h4>Langganan Buletin Kami</h4>
                     <p class="mt-2 mb-lg-4 mb-3">
-                        Duis posuere maximus arcu eu tincidunt. Nam rutrum, nibh vitae tempus venenatis, ex tortor
-                        ultricies magna, et faucibus magna eros quis arcu.
+                        Dapatkan informasi terbaru dan penawaran eksklusif langsung ke email Anda. Jangan lewatkan
+                        kesempatan untuk tetap terhubung dengan kami.
                     </p>
                     <form>
                         <div class="input-group">
-                            <input type="email" class="form-control border-lowBlack" placeholder="Your email" />
+                            <input type="email" class="form-control border-lowBlack" placeholder="Email Anda" />
                             <button class="button button-lg button--primary" type="button">
-                                Subscribe
+                                Langganan
                             </button>
                         </div>
                     </form>
@@ -1125,6 +1155,7 @@
         </div>
     </div>
 </section>
+
 
 @endsection
 

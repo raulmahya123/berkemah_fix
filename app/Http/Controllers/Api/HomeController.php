@@ -19,7 +19,7 @@ class HomeController extends Controller
                     'id' => $cat->id,
                     'category_name' => $cat->category_name,
                     'category_status' => $cat->category_status,
-                    'category_image' => asset('public/uploads/courseCategories/' . $cat->category_image),
+                    'category_image' => asset('uploads/courseCategories/' . $cat->category_image),
                 );
             }
         }
